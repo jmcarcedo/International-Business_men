@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <ImageView
+            android:id="@+id/products_top_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:src="@drawable/gnb_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/products_top_image">
+
+        <TextView
+                android:id="@+id/product_detail_product_headline"
+                style="@style/Headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/product_detail_name"
+                app:layout_constraintBottom_toTopOf="@id/product_detail_amount_headline"
+                app:layout_constraintStart_toStartOf="@id/start_guideline"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+                android:id="@+id/product_detail_product_name"
+                style="@style/Headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="product name"
+                app:layout_constraintBottom_toBottomOf="@id/product_detail_product_headline"
+                app:layout_constraintEnd_toEndOf="@+id/product_detail_amount_amount"
+                app:layout_constraintStart_toStartOf="@+id/product_detail_amount_amount"
+                app:layout_constraintTop_toTopOf="@id/product_detail_product_headline" />
+
+        <TextView
+                android:id="@+id/product_detail_amount_headline"
+                style="@style/Headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:text="@string/product_detail_amount"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/start_guideline"
+                app:layout_constraintTop_toBottomOf="@id/product_detail_product_headline" />
+
+        <TextView
+                android:id="@+id/product_detail_amount_amount"
+                style="@style/Headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="product amount"
+                app:layout_constraintBottom_toBottomOf="@id/product_detail_amount_headline"
+                app:layout_constraintEnd_toStartOf="@id/product_detail_amount_currency"
+                app:layout_constraintStart_toEndOf="@+id/product_detail_amount_headline"
+                app:layout_constraintTop_toTopOf="@id/product_detail_amount_headline" />
+
+        <TextView
+                android:id="@+id/product_detail_amount_currency"
+                style="@style/Headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/product_detail_EUR_currency"
+                app:layout_constraintBottom_toBottomOf="@id/product_detail_amount_headline"
+                app:layout_constraintEnd_toEndOf="@id/end_guideline"
+                app:layout_constraintTop_toTopOf="@id/product_detail_amount_headline" />
+
+        <include layout="@layout/loading_progress" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/start_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.15" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/end_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.85" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

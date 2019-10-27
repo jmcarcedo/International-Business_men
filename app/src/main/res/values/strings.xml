@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GNB Business</string>
+    <string name="product_selection">Please select one product:</string>
+    <string name="product_detail_name">Product:</string>
+    <string name="product_detail_amount">Amount:</string>
+    <string name="product_detail_EUR_currency">EUR</string>
+</resources>

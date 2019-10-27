@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="fontNormal" parent="TextAppearance.AppCompat.Medium"/>
+
+    <style name="Headline" parent="fontNormal">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">@dimen/text_size_20</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="singleRecyclerItem" parent="fontNormal">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:padding">@dimen/margin_5</item>
+        <item name="android:textSize">@dimen/text_size_20</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+</resources>
